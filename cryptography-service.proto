@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./cryptography-service";
+
+package protos;
+
+service CryptographyManager {
+  rpc Encrypt(EncryptRequest) returns (EncryptResponse);
+  rpc Decrypt(DecryptRequest) returns (DecryptResponse);
+}
+
+message EncryptRequest {
+  string plaintext = 1;
+}
+
+message EncryptResponse {
+  string ciphertext = 1;
+}

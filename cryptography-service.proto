@@ -16,3 +16,11 @@ message EncryptRequest {
 message EncryptResponse {
   string ciphertext = 1;
 }
+
+message DecryptRequest {
+  string ciphertext = 1;
+}
+
+message DecryptResponse {
+  string plaintext = 1;
+}
